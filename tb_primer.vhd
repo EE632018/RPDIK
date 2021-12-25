@@ -44,8 +44,8 @@ begin
        begin
        reset<='1', '0' after 25ns;
        start<='1';
-       b_in<=X"0E";
-       a_in<=X"07";
+       b_in<=X"0A";
+       a_in<=X"03";
        wait ;
        end process;            
 

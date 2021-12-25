@@ -53,7 +53,7 @@ begin
                         state_next<=divide;
                      end if;
                 when divide=>
-                    if(op1 >= op2)then
+                    if(op1>op2)then
                         state_next<=cuvanje;
                     else
                      state_next<=result;
@@ -109,4 +109,6 @@ begin
 end Behavioral;
         
         
-      
+        adder<= std_logic_vector(TO_UNSIGNED(1,WIDTH) + unsigned(q_s));
+        sub<= std_logic_vector(unsigned(op1) - unsigned(op2));   
+end Behavioral;
