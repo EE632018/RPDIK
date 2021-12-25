@@ -81,8 +81,13 @@ begin
                     q_s<=(others=>'0');
                     r_s<=(others=> '0');
                 when bigger=>
-                    op1<=a_next;
-                    op2<=b_next;
+                    if(a_next>b_next) then
+                        op1<=a_next;
+                        op2<=b_next;
+                    else 
+                        op1<=b_next;
+                        op2<=a_next;
+                    end if;        
                 when divide=>
                     op1<=sub;
                     q_s<=adder;
