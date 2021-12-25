@@ -1,0 +1,19 @@
+-- Birnary Search
+
+key == nesto
+ l1 : if(left<=right){
+    middle=(left+right)/2;
+    if(x[middle]=key)then
+    stop:	return key;
+    if(x[middle]>key)then
+	right=middle-1;
+	goto l1;
+    if(x[middle]<key)then
+	left=middle+1;
+	goto l1;
+ }
+ else
+	return not_found;
+	
+ 
+
